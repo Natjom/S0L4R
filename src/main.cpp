@@ -6,7 +6,10 @@ int main() {
 
     astre soleil({0.f, 0.f}, {0.f, 0.f}, 1000.f, 50.f, sf::Color::Yellow);
 
-    astre terre({-100.f, 0.f}, {0.f, 0.f}, 10.f, 2.f, sf::Color::Blue);
+    astre mercure({-100.f, -100.f}, {0.f, 0.f}, 10.f, 2.f, sf::Color::Magenta);
+    astre venus({-100.f, 100.f}, {0.f, 0.f}, 10.f, 2.f, sf::Color::White);
+    astre terre({100.f, -100.f}, {0.f, 0.f}, 10.f, 2.f, sf::Color::Blue);
+    astre mars({100.f, 100.f}, {0.f, 0.f}, 10.f, 2.f, sf::Color::Red);
 
     float window_width = 1000.f;
     float window_height = 850.f;
@@ -27,7 +30,10 @@ int main() {
         window.clear();
 
         soleil.draw(window);
+        mercure.draw(window);
+        venus.draw(window);
         terre.draw(window);
+        mars.draw(window);
 
         window.display();
     }
