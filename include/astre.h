@@ -8,8 +8,11 @@ class astre {
     public:
         sf::Vector2f position;
         sf::Vector2f vitesse;
+        float rayon;
         float masse;
         sf::CircleShape forme;
+
+        astre();
 
         astre(sf::Vector2f pos, sf::Vector2f vit, float m, float rayon, sf::Color couleur);
 
