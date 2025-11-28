@@ -4,7 +4,9 @@
  
 F : Force de gravité
 
-G : Constante gravitationnelle\n
+G : Constante gravitationnelle
+
+G = 6,674 × 10−11 m3 kg−1 s.
 
 m1, m2 : Masses des deux objets
 

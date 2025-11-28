@@ -19,6 +19,8 @@ add_executable(s0l4r
         src/main.cpp
         src/astre.cpp
         include/astre.h
+        src/physique.cpp
+        include/physique.h
 )
 
 target_link_libraries(s0l4r PRIVATE sfml-graphics sfml-window sfml-system)
