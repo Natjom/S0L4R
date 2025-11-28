@@ -7,7 +7,7 @@
 
 class physique {
     public:
-        static constexpr float G = 0.05f;
+        static constexpr float G = 1.f;
 
         static void appliquerGravite(std::vector<astre>& astres, float dt);
 
