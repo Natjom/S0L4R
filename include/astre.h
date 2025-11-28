@@ -2,6 +2,7 @@
 #define S0L4R_ASTRE_H
 
 #include <SFML/Graphics.hpp>
+#include <deque>
 
 class astre {
 
@@ -11,6 +12,9 @@ class astre {
         float rayon;
         float masse;
         sf::CircleShape forme;
+
+        std::deque<sf::Vector2f> trajectoire;
+        static constexpr size_t MAX_TRAIL = 2000;
 
         astre();
 

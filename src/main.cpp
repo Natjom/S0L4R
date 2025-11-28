@@ -5,7 +5,7 @@
 #include <memory>
 
 #include <astre.h>
-#include "physique.h"
+#include <physique.h>
 
 int trouverPlaneteSousSouris(sf::RenderWindow& window, const std::vector<astre>& astres) {
     sf::Vector2i mousePosScreen = sf::Mouse::getPosition(window);
@@ -58,7 +58,7 @@ int main() {
     sf::RenderWindow window(sf::VideoMode({static_cast<unsigned>(window_width), static_cast<unsigned>(window_height)}), "S0L4R - REAL SCALE");
     window.setFramerateLimit(144);
     sf::View camera({0.f, 0.f}, {window_width, window_height});
-    camera.zoom(50.0f);
+    camera.zoom(1.0f);
     window.setView(camera);
     float dt = 1.f;
     float vitesseCamera = 1000.f;
@@ -122,10 +122,10 @@ int main() {
                 }
             }
         }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))  { camera.move({-vitesseCamera, 0.f}); verouillage = false; }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) { camera.move({vitesseCamera, 0.f});  verouillage = false; }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))    { camera.move({0.f, -vitesseCamera}); verouillage = false; }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))  { camera.move({0.f, vitesseCamera});  verouillage = false; }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))  { camera.move({-vitesseCamera, 0.f}); verouillage = false; }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) { camera.move({vitesseCamera, 0.f});  verouillage = false; }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))    { camera.move({0.f, -vitesseCamera}); verouillage = false; }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))  { camera.move({0.f, vitesseCamera});  verouillage = false; }
         for(int i=0; i<32; i++) {
             physique::appliquerGravite(systemeSolaire, dt / 32.f);
         }
